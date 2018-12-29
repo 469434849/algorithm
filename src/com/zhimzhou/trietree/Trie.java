@@ -1,4 +1,4 @@
-package com.zhouhaoisme.trietree;
+package com.zhimzhou.trietree;
 
 import java.util.*;
 
@@ -110,19 +110,4 @@ public class Trie {
         return list;
     }
 
-    public static void main(String[] args) throws Exception {
-        Thread.sleep(10*2000);
-
-        AutoTester autoTester = new AutoTester() {
-            @Override
-            HashMap<String, Integer> runner(List<String> stringList, int top) {
-                Trie trie = new Trie();
-                for (String str : stringList) {
-                    trie.insert(str);
-                }
-                return trie.traverse(trie.root, top);
-            }
-        };
-        autoTester.test();
-    }
 }
