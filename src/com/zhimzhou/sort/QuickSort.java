@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * Arrays.sort()
- * jdk1.7及以前用的时快排
+ * jdk1.7及以前用的是快排
  * jdk1.8开始使用DualPivotQuicksort（双轴快排）
  * <p>
  * 快速排序:分治法策略
