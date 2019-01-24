@@ -1,4 +1,4 @@
-package com.zhimzhou.trietree;
+package com.zhimzhou.tree;
 
 import java.util.*;
 

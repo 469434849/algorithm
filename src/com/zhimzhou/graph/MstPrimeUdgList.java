@@ -2,7 +2,6 @@ package com.zhimzhou.graph;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.function.Consumer;
 
 /**
  * 邻接表实现Prime
