@@ -70,7 +70,7 @@ public class MstPrimeUdgList {
 	 */
 	private static Vnode[] mVexs;
 
-	private static final EData[] eDataArray = new EData[]{
+	private static final EData[] E_DATA_ARRAY = new EData[]{
 			new EData('A', 'B', 12),
 			new EData('A', 'F', 16),
 			new EData('A', 'G', 14),
@@ -88,7 +88,7 @@ public class MstPrimeUdgList {
 	public static void main(String[] args) {
 		//mVexs = udgListByInput();
 		//printUdgList(mVexs);
-		mVexs = udgListByConstructor(eDataArray);
+		mVexs = udgListByConstructor(E_DATA_ARRAY);
 		printUdgList(mVexs);
 		mst(mVexs, 'A');
 		//最小生成树的权值:
@@ -144,7 +144,7 @@ public class MstPrimeUdgList {
 	 * @param eDataArray
 	 * @return
 	 */
-	private static Vnode[] udgListByConstructor(EData[] eDataArray) {
+	public static Vnode[] udgListByConstructor(EData[] eDataArray) {
 		Vnode[] vNodes = new Vnode[VERTICES.length];
 		for (int i = 0; i < VERTICES.length; i++) {
 			vNodes[i] = new Vnode(VERTICES[i]);
@@ -202,7 +202,7 @@ public class MstPrimeUdgList {
 	 * 和enode对应节点末尾添加vnode数据
 	 * A-B  10        B-A 10
 	 */
-	private static void addENodeToVNodeLast(Vnode[] vNodes, int index1, int index2, int weight) {
+	public static void addENodeToVNodeLast(Vnode[] vNodes, int index1, int index2, int weight) {
 		Vnode vNode1 = vNodes[index1];
 		Vnode vNode2 = vNodes[index2];
 		Enode eNode1 = new Enode(vNode2.data, weight);
@@ -234,7 +234,7 @@ public class MstPrimeUdgList {
 	 *
 	 * @param vNodes
 	 */
-	private static void printUdgList(Vnode[] vNodes) {
+	public static void printUdgList(Vnode[] vNodes) {
 		for (Vnode temp : vNodes) {
 			Enode tempENode = temp.enode;
 			System.out.print(temp.data);
