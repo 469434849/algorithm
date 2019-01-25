@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 /**
+ * 单源最短路径算法
  * Dijkstra：最短路径算法，一个点到其他所有点的最短路径
  *
  * @author zhimzhou
@@ -124,6 +125,9 @@ public class Dijkstra {
 			new EData('F', 'G', 9),
 	};
 
+	/**
+	 * D(0)C(3)E(4)F(6)G(12)B(13)A(22)
+	 */
 	public static void main(String[] args) {
 		mVexs = udgListByConstructor(E_DATA_ARRAY);
 		printUdgList(mVexs);
